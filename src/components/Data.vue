@@ -7,7 +7,7 @@
     <div v-else>
       <div class="container">
         <div v-for="photo in filteredPhotos" :key="photo.id" class="cont">
-          <img :src="photo.url" :alt="photo.title" />
+          <img :src="photo.url" :alt="photo.title" class="photo-img" />
           <p>{{ photo.title }}</p>
         </div>
       </div>
@@ -61,9 +61,11 @@ export default {
   flex-direction: column;
 }
 
-.cont img {
-  height: 25rem;
-  width: 25rem;
+.photo-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .container {
